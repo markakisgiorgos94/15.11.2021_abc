@@ -1,0 +1,110 @@
+                                                   -------------- Part 2 --------------
+                                                   
+                     ------------ ΕΡΩΤΗΜΑ 1 (Is there any improvement for users that are New to the platform?) -------------
+                                                   
+                                                   -------------- QUERY 10 --------------
+                                                   
+  --ΓΙΑ ΝΑ ΑΠΟΦΑΝΘΟΥΜΕ ΑΝ ΤΑ 2 ΝΕΑ solutions (Variation #1/Variation #2) ΠΡΟΣΦΕΡΟΥΝ ΚΑΠΟΙΑ ΒΕΛΤΙΩΣΗ ΓΙΑ ΤΟΥΣ ΝΕΟΥΣ ΧΡΗΣΤΕΣ ΤΗΣ ΠΛΑΤΦΟΡΜΑΣ ΕΚΤΕΛΕΙΤΑΙ ΤΟ QUERY 10 ΓΙΑ ΚΑΘΕ Variation (Original,Variation #1,Variation #2) ΓΙΑ ΝΑ ΒΡΟΥΜΕ ΤΑ CONVERSION RATE ΤΟΥΣ
+  -- ΑΡΧΙΚΑ ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ ΠΛΗΘΟΣ (7194) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Original ΟΤΑΝ ΕΙΣΗΛΘΑΝ ΣΤΗΝ ΠΛΑΤΦΟΡΜΑ
+
+select 
+
+count(session_id)
+
+from pa_dataset.experiment_data_10395400658
+
+where 1=1 
+and visitType      = 'New Visit'
+and variation_name = 'Original' 
+
+                                                -------------- QUERY 11 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ ΠΛΗΘΟΣ (1438) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Original ΟΤΑΝ ΕΙΣΗΛΘΑΝ ΣΤΗΝ ΠΛΑΤΦΟΡΜΑ ΚΑΙ ΠΡΑΓΜΑΤΟΠΟΙΗΣΑΝ ΜΙΑ ΑΓΟΡΑ
+
+select 
+
+count(session_id)
+
+from pa_dataset.experiment_data_10395400658
+
+where 1=1 
+and visitType      = 'New Visit'
+and variation_name = 'Original' 
+and event_key      = 'transaction'
+
+                                              -------------- QUERY 12 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ Conversion Rate (19.99%)
+
+select (1438/7194)*100
+
+                                              -------------- QUERY 13 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ ΠΛΗΘΟΣ (7290) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Variation #1 ΟΤΑΝ ΕΙΣΗΛΘΑΝ ΣΤΗΝ ΠΛΑΤΦΟΡΜΑ
+
+select 
+
+count(session_id)
+
+from pa_dataset.experiment_data_10395400658
+
+where 1=1 
+and visitType      = 'New Visit'
+and variation_name = 'Variation #1' 
+
+                                                -------------- QUERY 14 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ ΠΛΗΘΟΣ (1458) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Variation #1 ΟΤΑΝ ΕΙΣΗΛΘΑΝ ΣΤΗΝ ΠΛΑΤΦΟΡΜΑ ΚΑΙ ΠΡΑΓΜΑΤΟΠΟΙΗΣΑΝ ΜΙΑ ΑΓΟΡΑ
+
+select 
+
+count(session_id)
+
+from pa_dataset.experiment_data_10395400658
+
+where 1=1 
+and visitType      = 'New Visit'
+and variation_name = 'Variation #1' 
+and event_key      = 'transaction'
+
+                                              -------------- QUERY 15 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ Conversion Rate (20.00%)
+
+select (1458/7290)*100
+
+
+                                              -------------- QUERY 16 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ ΠΛΗΘΟΣ (7133) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Variation #2 ΟΤΑΝ ΕΙΣΗΛΘΑΝ ΣΤΗΝ ΠΛΑΤΦΟΡΜΑ
+
+select 
+
+count(session_id)
+
+from pa_dataset.experiment_data_10395400658
+
+where 1=1 
+and visitType      = 'New Visit'
+and variation_name = 'Variation #2' 
+
+                                                -------------- QUERY 17 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ ΠΛΗΘΟΣ (1425) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Variation #2 ΟΤΑΝ ΕΙΣΗΛΘΑΝ ΣΤΗΝ ΠΛΑΤΦΟΡΜΑ ΚΑΙ ΠΡΑΓΜΑΤΟΠΟΙΗΣΑΝ ΜΙΑ ΑΓΟΡΑ
+
+select 
+
+count(session_id)
+
+from pa_dataset.experiment_data_10395400658
+
+where 1=1 
+and visitType      = 'New Visit'
+and variation_name = 'Variation #2' 
+and event_key      = 'transaction'
+
+                                              -------------- QUERY 18 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ Conversion Rate (19.98%)
+
+select (1425/7133)*100
