@@ -1,0 +1,105 @@
+                                                 ---------------- part 1 ----------------
+
+
+                                                ---------------- QUERY 1 ----------------
+                                                
+-- ΓΙΑ ΝΑ ΒΡΩ ΤΟ ΠΛΗΘΟΣ (36919) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Original ΚΑΤΑ ΤΗΝ ΕΙΣΟΔΟ ΤΟΥΣ ΣΤΗΝ ΠΛΑΡΦΟΡΜΑ
+
+select 
+
+count(session_id) 
+
+from pa_dataset.experiment_data_10395400658
+
+where variation_name = 'Original' 
+
+
+                                               ---------------- QUERY 2 ----------------
+
+-- ΓΙΑ ΝΑ ΒΡΩ ΤΟ ΠΛΗΘΟΣ (7391) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Original ΚΑΤΑ ΤΗΝ ΕΙΣΟΔΟ ΤΟΥΣ ΣΤΗΝ ΠΛΑΡΦΟΡΜΑ KAI ΠΡΑΓΜΑΤΟΠΟΙΗΣΑΝ ΜΙΑ ΑΓΟΡΑ 
+
+select 
+
+count(session_id) 
+
+from pa_dataset.experiment_data_10395400658
+
+where 1=1
+and variation_name = 'Original' 
+and event_key      = 'transaction'
+
+                                              ---------------- QUERY 3 ----------------
+
+-- ΓΙΑ ΝΑ ΒΡΩ ΤΟ Conversion Rate  
+
+select (7391/36919)*100
+
+
+                                             ---------------- QUERY 4 ----------------
+                                             
+                                             
+ -- ΓΙΑ ΝΑ ΒΡΩ ΤΟ ΠΛΗΘΟΣ (38194) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Variation #1 ΚΑΤΑ ΤΗΝ ΕΙΣΟΔΟ ΤΟΥΣ ΣΤΗΝ ΠΛΑΡΦΟΡΜΑ
+
+select 
+
+count(session_id) 
+
+from pa_dataset.experiment_data_10395400658
+
+where variation_name = 'Variation #1' 
+
+
+                                               ---------------- QUERY 5 ----------------
+
+-- ΓΙΑ ΝΑ ΒΡΩ ΤΟ ΠΛΗΘΟΣ (7640) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Variation #1 ΚΑΤΑ ΤΗΝ ΕΙΣΟΔΟ ΤΟΥΣ ΣΤΗΝ ΠΛΑΡΦΟΡΜΑ KAI ΠΡΑΓΜΑΤΟΠΟΙΗΣΑΝ ΜΙΑ ΑΓΟΡΑ 
+
+select 
+
+count(session_id) 
+
+from pa_dataset.experiment_data_10395400658
+
+where 1=1
+and variation_name = 'Variation #1' 
+and event_key      = 'transaction'
+
+                                              ---------------- QUERY 6 ----------------
+
+-- ΓΙΑ ΝΑ ΒΡΩ ΤΟ Conversion Rate  
+
+select (7640/38194)*100                                     
+
+
+                                             ---------------- QUERY 7 ----------------
+                                             
+                                             
+ -- ΓΙΑ ΝΑ ΒΡΩ ΤΟ ΠΛΗΘΟΣ (38273) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Variation #2 ΚΑΤΑ ΤΗΝ ΕΙΣΟΔΟ ΤΟΥΣ ΣΤΗΝ ΠΛΑΡΦΟΡΜΑ
+
+select 
+
+count(session_id) 
+
+from pa_dataset.experiment_data_10395400658
+
+where variation_name = 'Variation #2' 
+
+
+                                               ---------------- QUERY 8 ----------------
+
+-- ΓΙΑ ΝΑ ΒΡΩ ΤΟ ΠΛΗΘΟΣ (7653) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Variation #2 ΚΑΤΑ ΤΗΝ ΕΙΣΟΔΟ ΤΟΥΣ ΣΤΗΝ ΠΛΑΡΦΟΡΜΑ KAI ΠΡΑΓΜΑΤΟΠΟΙΗΣΑΝ ΜΙΑ ΑΓΟΡΑ 
+
+select 
+
+count(session_id) 
+
+from pa_dataset.experiment_data_10395400658
+
+where 1=1
+and variation_name = 'Variation #2' 
+and event_key      = 'transaction'
+
+                                              ---------------- QUERY 9 ----------------
+
+-- ΓΙΑ ΝΑ ΒΡΩ ΤΟ Conversion Rate  
+
+select (7653/38273)*100 
