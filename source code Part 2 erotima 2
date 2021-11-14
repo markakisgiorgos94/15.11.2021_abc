@@ -1,0 +1,254 @@
+                                                   -------------- Part 2 --------------
+                                                   
+ ------------ ΕΡΩΤΗΜΑ 2 (Maybe, users that come from google/cpc to the platform and to a shop have different results compared to the rest group of users?) -------------
+                                                   
+                                                   -------------- QUERY 19 --------------
+                                                   
+  --ΓΙΑ ΝΑ ΑΠΟΦΑΝΘΟΥΜΕ ΑΝ ΟΙ ΧΡΗΣΤΕΣ ΠΟΥ ΕΙΣΕΡΧΟΝΤΑΙ ΑΠΟ google/cpc (ΓΡΚΟΥΠ 1) ΣΕ ΣΧΕΣΗ ΜΕ ΟΛΟΥΣ ΤΟΥΣ ΥΠΟΛΟΙΠΟΥΣ (ΓΡΚΟΥΠ 2, ΟΛΟΙ ΕΚΤΟΣ ΑΠΟ google/cpc) ΠΡΕΠΕΙ ΝΑ ΥΠΟΛΟΓΙΣΤΕΙ ΓΙΑ ΚΑΘΕ Variation (Original,Variation #1,Variation #2) ΤΑ CONVERSION RATE ΤΟΥΣ
+  -- ΑΡΧΙΚΑ ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ ΠΛΗΘΟΣ (13178) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Original ΟΤΑΝ ΕΙΣΗΛΘΑΝ ΣΤΗΝ ΠΛΑΤΦΟΡΜΑ ΑΠΟ google/cpc
+
+select 
+
+count(session_id)
+
+from 
+pa_dataset.experiment_data_10395400658
+
+where 1=1 
+and source = 'google'
+and medium = 'cpc'
+and variation_name = 'Original' 
+
+
+                                                -------------- QUERY 20 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ ΠΛΗΘΟΣ (2642) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Original ΟΤΑΝ ΕΙΣΗΛΘΑΝ ΣΤΗΝ ΠΛΑΤΦΟΡΜΑ ΑΠΟ google/cpc ΚΑΙ ΠΡΑΓΜΑΤΟΠΟΙΗΣΑΝ ΜΙΑ ΑΓΟΡΑ 
+
+select 
+
+count(session_id)
+
+from 
+pa_dataset.experiment_data_10395400658
+
+where 1=1 
+and source = 'google'
+and medium = 'cpc'
+and variation_name = 'Original' 
+and event_key = 'transaction'
+
+                                              -------------- QUERY 21 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ Conversion Rate (20.05%)
+
+select (2642/13178)*100
+
+                                              -------------- QUERY 22 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ ΠΛΗΘΟΣ (14224) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Variation #1 ΟΤΑΝ ΕΙΣΗΛΘΑΝ ΣΤΗΝ ΠΛΑΤΦΟΡΜΑ ΑΠΟ google/cpc
+
+select 
+
+count(session_id)
+
+from 
+pa_dataset.experiment_data_10395400658
+
+where 1=1 
+and source = 'google'
+and medium = 'cpc'
+and variation_name = 'Variation #1' 
+
+
+                                                -------------- QUERY 23 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ ΠΛΗΘΟΣ (2844) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Variation #1 ΟΤΑΝ ΕΙΣΗΛΘΑΝ ΣΤΗΝ ΠΛΑΤΦΟΡΜΑ ΑΠΟ google/cpc ΚΑΙ ΠΡΑΓΜΑΤΟΠΟΙΗΣΑΝ ΜΙΑ ΑΓΟΡΑ
+
+select 
+
+count(session_id)
+
+from 
+pa_dataset.experiment_data_10395400658
+
+where 1=1 
+and source = 'google'
+and medium = 'cpc'
+and variation_name = 'Variation #1' 
+and event_key = 'transaction' 
+
+                                              -------------- QUERY 24 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ Conversion Rate (19.99%)
+
+select (2844/14224)*100
+
+
+                                              -------------- QUERY 25 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ ΠΛΗΘΟΣ (14489) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Variation #2 ΟΤΑΝ ΕΙΣΗΛΘΑΝ ΣΤΗΝ ΠΛΑΤΦΟΡΜΑ ΑΠΟ google/cpc
+
+select 
+
+count(session_id)
+
+from 
+pa_dataset.experiment_data_10395400658
+
+where 1=1 
+and source = 'google'
+and medium = 'cpc'
+and variation_name = 'Variation #2' 
+
+
+                                                -------------- QUERY 26 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ ΠΛΗΘΟΣ (2897) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Variation #2 ΟΤΑΝ ΕΙΣΗΛΘΑΝ ΣΤΗΝ ΠΛΑΤΦΟΡΜΑ ΑΠΟ google/cpc ΚΑΙ ΠΡΑΓΜΑΤΟΠΟΙΗΣΑΝ ΜΙΑ ΑΓΟΡΑ
+
+select 
+
+count(session_id)
+
+from 
+pa_dataset.experiment_data_10395400658
+
+where 1=1 
+and source = 'google'
+and medium = 'cpc'
+and variation_name = 'Variation #2' 
+and event_key = 'transaction' 
+
+                                              -------------- QUERY 27 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ Conversion Rate (19.99%)
+
+select (2897/14489)*100
+
+
+
+                                               -------------- QUERY 28 --------------
+                                                   
+  
+  -- ΑΡΧΙΚΑ ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ ΠΛΗΘΟΣ (23741) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Original ΟΤΑΝ ΕΙΣΗΛΘΑΝ ΣΤΗΝ ΠΛΑΤΦΟΡΜΑ ΑΠΟ ΤΟ 2ο ΓΚΡΟΥΠ (ΟΥΣΙΑΣΤΙΚΑ ΑΦΑΙΡΕΙΣ ΑΠΟ ΤΑ ΠΑΝΤΑ ΤΟ 1ο ΓΚΡΟΥΠ ΓΙΑ ΝΑ ΒΡΕΙΣ ΤΟ ΠΛΗΘΟΣ)
+
+select 
+
+count(session_id)
+
+from 
+pa_dataset.experiment_data_10395400658
+
+where 1=1 
+and variation_name = 'Original' 
+
+select 36919-13178
+
+
+                                                -------------- QUERY 20 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ ΠΛΗΘΟΣ (4749) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Original ΟΤΑΝ ΕΙΣΗΛΘΑΝ ΣΤΗΝ ΠΛΑΤΦΟΡΜΑ ΑΠΟ google/cpc ΚΑΙ ΠΡΑΓΜΑΤΟΠΟΙΗΣΑΝ ΜΙΑ ΑΓΟΡΑ 
+
+select 
+
+count(session_id)
+
+from 
+pa_dataset.experiment_data_10395400658
+
+where 1=1 
+and variation_name = 'Original' 
+and event_key = 'transaction'
+
+select 7391-2642
+
+                                              -------------- QUERY 21 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ Conversion Rate (20.00%)
+
+select (4749/23741)*100
+
+                                              -------------- QUERY 22 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ ΠΛΗΘΟΣ (23970) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Variation #1 ΟΤΑΝ ΕΙΣΗΛΘΑΝ ΣΤΗΝ ΠΛΑΤΦΟΡΜΑ ΑΠΟ ΤΟ 2ο ΓΚΡΟΥΠ
+
+select 
+
+count(session_id)
+
+from 
+pa_dataset.experiment_data_10395400658
+
+where 1=1 
+and variation_name = 'Variation #1' 
+
+
+select 38194-14224
+
+
+                                                -------------- QUERY 23 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ ΠΛΗΘΟΣ (4796) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Variation #1 ΟΤΑΝ ΕΙΣΗΛΘΑΝ ΣΤΗΝ ΠΛΑΤΦΟΡΜΑ ΑΠΟ ΤΟ 2ο ΓΚΡΟΥΠ ΚΑΙ ΠΡΑΓΜΑΤΟΠΟΙΗΣΑΝ ΑΓΟΡΑ
+
+select 
+
+count(session_id)
+
+from 
+pa_dataset.experiment_data_10395400658
+
+where 1=1 
+and variation_name = 'Variation #1' 
+and event_key = 'transaction'
+
+select 7640-2844
+
+                                              -------------- QUERY 24 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ Conversion Rate (20.01%)
+
+select (4796/23970)*100
+
+
+                                              -------------- QUERY 25 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ ΠΛΗΘΟΣ (23784) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Variation #2 ΟΤΑΝ ΕΙΣΗΛΘΑΝ ΣΤΗΝ ΠΛΑΤΦΟΡΜΑ ΑΠΟ ΤΟ 2ο ΓΚΡΟΥΠ
+
+
+select 
+
+count(session_id)
+
+from 
+pa_dataset.experiment_data_10395400658
+
+where 1=1 
+and variation_name = 'Variation #2' 
+
+select 38273-14489
+
+
+
+                                                -------------- QUERY 26 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ ΠΛΗΘΟΣ (4756) ΤΩΝ ΧΡΗΣΤΩΝ ΠΟΥ ΕΙΔΑΝ ΤΟ Variation #2 ΟΤΑΝ ΕΙΣΗΛΘΑΝ ΣΤΗΝ ΠΛΑΤΦΟΡΜΑ ΑΠΟ ΤΟ 2ο ΓΚΡΟΥΠ ΚΑΙ ΠΡΑΓΜΑΤΟΠΟΙΗΣΑΝ ΜΙΑ ΑΓΟΡΑ
+
+select 
+
+count(session_id)
+
+from 
+pa_dataset.experiment_data_10395400658
+
+where 1=1 
+and variation_name = 'Variation #2' 
+and event_key = 'transaction'
+
+select 7653-2897
+
+                                              -------------- QUERY 27 --------------
+
+-- ΓΙΑ ΝΑ ΒΡΕΘΕΙ ΤΟ Conversion Rate (20.00%)
+
+select (4756/23784)*100
+
+
