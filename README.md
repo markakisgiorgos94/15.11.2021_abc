@@ -13,7 +13,7 @@ part 2
                                                 
                                                 ΕΡΩΤΗΜΑ
 
-ΓΙΑ ΝΑ ΑΠΟΦΑΝΘΟΥΜΕ ΑΝ ΥΠΑΡΧΕΙ ΚΑΠΟΙΟ solution ΑΠΟ ΤΑ 2 ΠΟΥ ΤΕΣΤΑΡΟΝΤΑΙ ΠΟΥ ΒΕΛΤΙΩΝΕΙ ΤΟ conversion rate, ΤΡΕΧΟΥΜΕ ΤΟ QUERY#8 ΓΙΑ ΚΑΘE VARIATION (Original, Variation #1, Variation #2) ΓΙΑ ΝΑ ΒΡΩ ΤΑ CONVERSION RATE ΤΟΥΣ ΚΑΙ ΝΑ ΤΑ ΣΥΓΚΡΙΝΩ.
+ΓΙΑ ΝΑ ΑΠΟΦΑΝΘΟΥΜΕ ΑΝ ΥΠΑΡΧΕΙ ΚΑΠΟΙΟ solution ΑΠΟ ΤΑ 2 ΠΟΥ ΤΕΣΤΑΡΟΝΤΑΙ ΠΟΥ ΒΕΛΤΙΩΝΕΙ ΤΟ conversion rate, ΤΡΕΧΟΥΜΕ ΤA QUERY 1-9 ΓΙΑ ΚΑΘE VARIATION (Original, Variation #1, Variation #2) ΓΙΑ ΝΑ ΒΡΩ ΤΑ CONVERSION RATE ΤΟΥΣ ΚΑΙ ΝΑ ΤΑ ΣΥΓΚΡΙΝΩ.
 
 Original CONVERSION RATE     -> 20.02%
 Variation #1 CONVERSION RATE -> 20.00% 
@@ -25,7 +25,7 @@ Variation #2 CONVERSION RATE -> 20.00%
                                                 
                                                 ΕΡΩΤΗΜΑ 1
                                                 
-ΓΙΑ ΝΑ ΑΝΑΓΝΩΡΙΣΟΥΜΕ ΤΟΥΣ USERS ΠΟΥ ΕΙΝΑΙ ΝΕΟΙ ΣΤΗΝ ΠΛΑΤΦΟΡΜΑ ΤΡΕΧΟΥΜΕ ΤΟ QUERY#9 ΓΙΑ ΚΑΘΕ VARIATION (Original, Variation #1, Variation #2) ΓΙΑ ΝΑ ΒΡΩ ΤΑ CONVERSION RATE ΤΟΥΣ.   
+ΓΙΑ ΝΑ ΑΝΑΓΝΩΡΙΣΟΥΜΕ ΤΟΥΣ USERS ΠΟΥ ΕΙΝΑΙ ΝΕΟΙ ΣΤΗΝ ΠΛΑΤΦΟΡΜΑ ΤΡΕΧΟΥΜΕ ΤA QUERY 10-18 ΓΙΑ ΚΑΘΕ VARIATION (Original, Variation #1, Variation #2) ΓΙΑ ΝΑ ΒΡΩ ΤΑ CONVERSION RATE ΤΟΥΣ.   
 
 Original CONVERSION RATE     -> 19.99%
 Variation #1 CONVERSION RATE -> 20.00%
@@ -37,13 +37,13 @@ Variation #2 CONVERSION RATE -> 19.98%
                                                 ΕΡΩΤΗΜΑ 2
                                                 
                                                
-ΓΙΑ ΤΟ GROUP "Google/cpc" ΤΡΕΧΟΥΜΕ ΤΟ QUERY#10 ΓΙΑ ΚΑΘE VARIATION (Original, Variation #1, Variation #2) ΓΙΑ ΝΑ ΒΡΩ ΤΑ CONVERSION RATE ΤΟΥΣ.
+ΓΙΑ ΤΟ GROUP "Google/cpc" ΤΡΕΧΟΥΜΕ ΤA QUERY 19-27 ΓΙΑ ΚΑΘE VARIATION (Original, Variation #1, Variation #2) ΓΙΑ ΝΑ ΒΡΩ ΤΑ CONVERSION RATE ΤΟΥΣ.
  
 Original CONVERSION RATE     -> 20.05%
 Variation #1 CONVERSION RATE -> 19.99%
 Variation #2 CONVERSION RATE -> 19.99%
 
-ΓΙΑ ΟΛΑ ΤΑ ΥΠΟΛΟΙΠΑ (ΕΝΑ GROUP ΠΟΥ ΠΕΡΙΕΧΕΙ ΤΑ ΠΑΝΤΑ ΕΚΤΟΣ ΑΠΟ "Google/cpc" ) ΤΡΕΧΟΥΜΕ ΤΟ QUERY#11 ΓΙΑ ΚΑΘE VARIATION (Original, Variation #1, Variation #2) ΓΙΑ ΝΑ ΒΡΩ ΤΑ CONVERSION RATE ΤΟΥΣ.
+ΓΙΑ ΟΛΑ ΤΑ ΥΠΟΛΟΙΠΑ (ΕΝΑ GROUP ΠΟΥ ΠΕΡΙΕΧΕΙ ΤΑ ΠΑΝΤΑ ΕΚΤΟΣ ΑΠΟ "Google/cpc" ) ΤΡΕΧΟΥΜΕ ΤA QUERY 28-36 ΓΙΑ ΚΑΘE VARIATION (Original, Variation #1, Variation #2) ΓΙΑ ΝΑ ΒΡΩ ΤΑ CONVERSION RATE ΤΟΥΣ.
 
 Original CONVERSION RATE     -> 20.00%
 Variation #1 CONVERSION RATE -> 20.01%
